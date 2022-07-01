@@ -1,48 +1,37 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 	<title>Home</title>
 	<!-- <link rel="stylesheet" type="text/css" href="../static/css/styles.css"> -->
-	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+	<link rel="stylesheet" type="text/css" href="/static/style.css">
 </head>
-<body style="background-image: url('templates/air.jpg');">
 
-<header style="text-align: center;font-family: Arial, Helvetica, sans-serif;color: brown;">
+<body>
+
+	<header style="text-align: center;font-family: Arial, Helvetica, sans-serif;color: brown;">
 		<div class="container">
-		<h2>Air Quality Index Prediction</h2>
-		
-	</div>
+			<h2>Air Quality Index Prediction</h2>
+		</div>
 	</header>
 
-	<div class="ml-container">
-
-		<!-- <form action="{{ url_for('predict')}}" method="POST">
-		<p>Click the Predict Button</p>
-	    <input type="text" name="comment"/>
-		<textarea name="message" rows="6" cols="50"></textarea>
-		<br/>
-
-		<input type="submit" class="btn-info" value="predict">
-		
-	</form> 	 -->
-    <table>
 	<form action="{{ url_for('predict')}}" method="post">
-		
-		T (°C): <input id="temp" name="temp" type="text" ><br>
-		TM (°C): <input id="maxtemp" name="Maxtemp" type="text" ><br>
-		Tm (°C): <input id="mintemp" name="Mintemp" type="text" ><br>
-		SLP (hPa): <input id="sea" name="Sea" type="text" ><br>
-		H (%): <input id="humidity" name="Humidity" type="text" ><br>
-		VV (Km): <input id="visibility" name="Visibility" type="text" ><br>
-		V (Km/h): <input id="wind" name="Wind" type="text" ><br>
-		VM (Km/h): <input id="maxwind" name="Maxwind" type="text" ><br>
 
-		<input type="submit" class="btn-info" value="predict">
-		
+
+			<label>T (°C):</label> <input id="temp" name="temp" type="text" required /><br><br>
+			<label>TM (°C):</label> <input id="maxtemp" name="Maxtemp" type="text" required /><br><br>
+			<label>Tm (°C):</label> <input id="mintemp" name="Mintemp" type="text" required /><br><br>
+			<label>SLP (hPa):</label> <input id="sea" name="Sea" type="text" required /><br><br>
+			<label>H (%): </label><input id="humidity" name="Humidity" type="text" required /><br><br>
+			<label>VV (Km):</label> <input id="visibility" name="Visibility" type="text" required /><br><br>
+			<label>V (Km/h):</label> <input id="wind" name="Wind" type="text" required /><br><br>
+			<label>VM (Km/h):</label> <input id="maxwind" name="Maxwind" type="text" required /><br><br>
+
+			<input type="submit" value="predict" class="submitstyle" style="margin-right: 2cm ;" />
+
 	</form>
-	</table>
 
-	</div>
-	
 </body>
+
 </html>
+
