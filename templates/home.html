@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Home</title>
+	<!-- <link rel="stylesheet" type="text/css" href="../static/css/styles.css"> -->
+	<link rel="stylesheet" type="text/css" href="/static/style.css">
+</head>
+
+<body style="background-color: rgb(169, 199, 210) ;">
+
+	<h2 style="text-align: center;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;color: green;-webkit-text-stroke-width: 1px;-webkit-text-stroke-color:black ;">
+		<div class="container">
+			<h2>Air Quality Index Prediction</h2>
+		</div>
+	</h2>
+
+	<form action="{{ url_for('predict')}}" method="post">
+
+
+			<label>Average temperature (°C):</label> <input id="temp" name="temp" type="text" required /><br><br>
+			<label>Maximum temperature (°C):</label> <input id="maxtemp" name="Maxtemp" type="text" required /><br><br>
+			<label>Minimum temperature (°C):</label> <input id="mintemp" name="Mintemp" type="text" required /><br><br>
+			<label>Atmospheric pressure at sea level (hPa):</label> <input id="sea" name="Sea" type="text" required /><br><br>
+			<label>Average relative humidity (%): </label><input id="humidity" name="Humidity" type="text" required /><br><br>
+			<label>Average visibility (Km):</label> <input id="visibility" name="Visibility" type="text" required /><br><br>
+			<label>Average wind speed (Km/h):</label> <input id="wind" name="Wind" type="text" required /><br><br>
+			<label>Maximum wind speed (Km/h):</label> <input id="maxwind" name="Maxwind" type="text" required /><br><br>
+
+			<input type="submit" value="Predict" class="submitstyle" style="margin-right: 7cm ;font-family: 'Segoe UI';" />
+
+	</form>
+	<div style="text-align: center;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+		<h4>{{ prediction_text }}</h4>
+	</div>
+	
+</body>
+
+</html>
+
