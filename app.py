@@ -38,7 +38,7 @@ def predict():
 
         output=round(prediction[0],2)
 
-        return render_template('result.html',prediction_text="Air Quality Index (PM 2.5) is : {}".format(output) )
+        return render_template('home.html',prediction_text="Air Quality Index (PM 2.5) is : {}".format(output) )
     
     else:
         return render_template('home.html')
