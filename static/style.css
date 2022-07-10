@@ -1,8 +1,9 @@
 form{
   text-align: center;
+  font-family: 'Segoe UI';
 }
 input{
-  margin-left: 2.2cm;
+  margin-left: 8cm;
 }
 label{
   position: absolute;
