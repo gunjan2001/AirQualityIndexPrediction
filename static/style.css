@@ -4,6 +4,7 @@ form{
 }
 input{
   margin-left: 8cm;
+  text-align: center;
 }
 label{
   position: absolute;
